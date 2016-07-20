@@ -1,5 +1,5 @@
 /*!
- * JavaScript Linkify - v0.3 - 6/27/2009
+ * JavaScript Linkify - v0.3.1 - 6/27/2016
  * http://benalman.com/projects/javascript-linkify/
  * 
  * Copyright (c) 2009 "Cowboy" Ben Alman
@@ -210,8 +210,9 @@ window.linkify = (function(){
     parts.push([ txt.substr( idx_prev ) ]);
     
     // Process the array items.
-    for ( i = 0; i < parts.length; i++ ) {
-      html += options.callback.apply( window, parts[i] );
+    for ( i = 0; i < parts.length; i++ )
+    {
+        html += options.callback.apply(window, parts[i]);
     }
     
     // In case of catastrophic failure, return the original text;
